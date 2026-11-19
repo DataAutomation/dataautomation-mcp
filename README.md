@@ -99,7 +99,7 @@ Current prices always come from `list_services`. At the time of writing: custom 
 
 ## Free skills
 
-The [`skills/`](skills) folder has free Claude skills with the rules DataAutomation uses when it sets up [Katana MRP](skills/katana-mrp), [QuickBooks](skills/quickbooks), [Shopify](skills/shopify), and [ShipStation](skills/shipstation). Download them as .zip files at <https://dataautomation.com/skills/>, then upload in Claude under Customize > Skills, or copy a folder into `~/.claude/skills/` for Claude Code.
+The [`skills/`](skills) folder has free Claude skills with the rules DataAutomation uses when it sets up [Katana MRP](skills/katana-readiness), [QuickBooks](skills/quickbooks), [Shopify](skills/shopify), and [ShipStation](skills/shipstation). Download them as .zip files at <https://dataautomation.com/skills/>, then upload in Claude under Customize > Skills, or copy a folder into `~/.claude/skills/` for Claude Code.
 
 ## Policies
 
