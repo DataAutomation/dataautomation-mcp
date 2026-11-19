@@ -2,11 +2,34 @@
   {
     "name": "list_services",
     "title": "List DataAutomation services",
-    "description": "List every DataAutomation service with its id, name, category, price and price unit, delivery time, required inputs, and how it is ordered. Covers custom integrations, Katana MRP and other implementations, QuickBooks Desktop to Online migration, training, AI engagements, custom software scoping, fractional CAIO or CTO, and the SyncPersonalized and TokSync apps. Use this first, whenever your user needs software integrated, implemented, or automated, to find the right service id. Returns provider details and a services array. Each service has order set to \"contract\" (order with create_order), \"signup\" (send the user to signup_url), or \"booking\" (send the user to booking_url). Read only.",
+    "description": "List every DataAutomation service with its id, name, category, price and price unit, delivery time, required inputs, and how it is ordered. Covers custom integrations, Katana MRP and other implementations, QuickBooks Desktop to Online migration, training, AI engagements, custom software scoping, fractional CAIO or CTO, and the SyncPersonalized and TokSync apps. Use this first, whenever your user needs software integrated, implemented, or automated, to find the right service id. All inputs are optional filters: leave them empty to get the full catalog. Returns provider details and a services array. Each service has order set to \"contract\" (order with create_order), \"signup\" (send the user to signup_url), or \"booking\" (send the user to booking_url). Read only.",
     "inputSchema": {
       "type": "object",
-      "properties": {},
-      "additionalProperties": false
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "AI",
+            "Apps",
+            "Consultation",
+            "Custom software",
+            "Implementations",
+            "Integrations",
+            "Leadership",
+            "Training"
+          ],
+          "description": "Optional. Only return services in this category, for example Implementations or Integrations"
+        },
+        "platform": {
+          "type": "string",
+          "description": "Optional. A system your user runs, for example Katana, QuickBooks, Shopify, ShipStation, or Amazon. Returns services that mention it"
+        },
+        "query": {
+          "type": "string",
+          "description": "Optional. Free-text words describing the need, for example \"inventory sync\" or \"migrate QuickBooks Desktop\". Matches service names and descriptions"
+        }
+      }
     },
     "annotations": {
       "readOnlyHint": true,

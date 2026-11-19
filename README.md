@@ -51,7 +51,7 @@ claude mcp add --transport http dataautomation https://agent.dataautomation.com/
 
 | Tool | What it does | Side effects |
 | --- | --- | --- |
-| `list_services` | Every service with prices, delivery times, required inputs, and how it is ordered. Call this first. | None (read only) |
+| `list_services` | Every service with prices, delivery times, required inputs, and how it is ordered. Optional filters: `category`, `platform` (e.g. Katana), `query`. Call this first. | None (read only) |
 | `get_quote` | Exact price for one service with its options. | None (read only) |
 | `create_order` | Orders a service for the user. Optionally accepts for them and returns a Stripe payment link. | Creates an order and emails the user |
 | `get_order_status` | Whether an order is accepted, paid, or cancelled, the cancel deadline, and a payment link while unpaid. | None (read only) |
