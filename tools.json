@@ -137,6 +137,12 @@
       "idempotentHint": true,
       "openWorldHint": false,
       "title": "Get a quote"
+    },
+    "_meta": {
+      "ui": {
+        "resourceUri": "ui://dataautomation/order-card.html"
+      },
+      "ui/resourceUri": "ui://dataautomation/order-card.html"
     }
   },
   {
@@ -310,6 +316,12 @@
       "destructiveHint": false,
       "idempotentHint": false,
       "openWorldHint": true
+    },
+    "_meta": {
+      "ui": {
+        "resourceUri": "ui://dataautomation/order-card.html"
+      },
+      "ui/resourceUri": "ui://dataautomation/order-card.html"
     }
   },
   {
@@ -339,6 +351,12 @@
       "idempotentHint": true,
       "openWorldHint": false,
       "title": "Get order status"
+    },
+    "_meta": {
+      "ui": {
+        "resourceUri": "ui://dataautomation/order-card.html"
+      },
+      "ui/resourceUri": "ui://dataautomation/order-card.html"
     }
   }
 ]

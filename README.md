@@ -47,6 +47,15 @@ claude mcp add --transport http dataautomation https://agent.dataautomation.com/
 }
 ```
 
+
+## Interactive cards (MCP Apps)
+
+`get_quote`, `create_order`, and `get_order_status` declare an MCP Apps UI (`ui://dataautomation/order-card.html`, `text/html;profile=mcp-app`). Hosts that support MCP Apps, such as Claude and VS Code, show quotes and orders as a card with Order, Pay, and Talk to a person buttons. Other hosts get the same JSON as before.
+
+## WebMCP
+
+Every page on dataautomation.com registers `list_services`, `get_quote`, `open_order_form`, `create_order`, and `book_a_call` through `navigator.modelContext` when the browser supports WebMCP. Setup steps for every app: https://dataautomation.com/connect-your-ai/
+
 ## Tools
 
 | Tool | What it does | Side effects |
