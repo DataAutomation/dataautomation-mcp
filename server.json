@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.dataautomation/agent",
+  "title": "DataAutomation",
+  "description": "Quote, order, and pay for integrations, Katana implementations, AI, and custom software.",
+  "websiteUrl": "https://dataautomation.com/agents/",
+  "version": "1.2.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://agent.dataautomation.com/mcp"
+    }
+  ],
+  "icons": [
+    {
+      "src": "https://agent.dataautomation.com/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "256x256"
+      ]
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/DataAutomation/dataautomation-mcp",
+    "source": "github"
+  }
+}

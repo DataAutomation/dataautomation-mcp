@@ -1,0 +1,27 @@
+name: check
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 */6 * * *"
+jobs:
+  server:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: server.json is valid JSON with the expected name
+        run: python3 -c "import json; d=json.load(open('server.json')); assert d['name']=='com.dataautomation/agent'; assert d['remotes'][0]['url'].startswith('https://')"
+      - name: Live server lists the documented tools
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request
+          req = urllib.request.Request("https://agent.dataautomation.com/mcp",
+              data=json.dumps({"jsonrpc": "2.0", "id": 1, "method": "tools/list"}).encode(),
+              headers={"content-type": "application/json"})
+          live = {t["name"] for t in json.load(urllib.request.urlopen(req, timeout=30))["result"]["tools"]}
+          documented = {t["name"] for t in json.load(open("tools.json"))}
+          assert live == documented, (live, documented)
+          print("ok:", sorted(live))
+          PY
+      - name: Example quote works
+        run: python3 examples/order.py | tail -1

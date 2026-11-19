@@ -1,0 +1,321 @@
+[
+  {
+    "name": "list_services",
+    "title": "List DataAutomation services",
+    "description": "List every DataAutomation service (integrations, Katana and other implementations, QuickBooks migration, training, AI engagements, custom software, fractional CAIO or CTO, and apps) with prices, delivery times, required inputs, and how each is ordered. Call this first.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false,
+      "title": "List services"
+    }
+  },
+  {
+    "name": "get_quote",
+    "title": "Price a service",
+    "description": "Get an exact price for one service with its options before ordering. No side effects and nothing is saved.",
+    "inputSchema": {
+      "type": "object",
+      "required": [
+        "service"
+      ],
+      "properties": {
+        "service": {
+          "type": "string",
+          "enum": [
+            "integration",
+            "katana-implementation",
+            "katana-full-setup",
+            "shipstation-implementation",
+            "sutton-implementation",
+            "repzio-implementation",
+            "qbd-to-qbo-migration",
+            "training",
+            "ai-we-build-you-decide",
+            "ai-you-build-we-teach",
+            "ai-we-build-and-run",
+            "custom-software-scope",
+            "fractional-caio-cto",
+            "syncpersonalized",
+            "syncpersonalized-veeqo",
+            "toksync",
+            "discovery-call"
+          ],
+          "description": "Service id from list_services"
+        },
+        "options": {
+          "type": "object",
+          "description": "Service-specific options. Leave empty for fixed-price services.",
+          "properties": {
+            "flows": {
+              "type": "array",
+              "description": "integration only: one entry per flow, $100 per flow per month.",
+              "items": {
+                "type": "object",
+                "required": [
+                  "source",
+                  "destination"
+                ],
+                "properties": {
+                  "source": {
+                    "type": "string",
+                    "description": "System the data comes from, for example Shopify"
+                  },
+                  "destination": {
+                    "type": "string",
+                    "description": "System the data goes to, for example Katana"
+                  },
+                  "data": {
+                    "type": "string",
+                    "description": "What moves, for example orders, inventory, tracking, or invoices"
+                  }
+                }
+              }
+            },
+            "hours": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 80,
+              "description": "training only: number of training hours at $250 per hour"
+            },
+            "hours_per_month": {
+              "type": "integer",
+              "minimum": 2,
+              "maximum": 160,
+              "description": "fractional-caio-cto only: retainer hours per month at $250 per hour"
+            },
+            "tier": {
+              "type": "integer",
+              "enum": [
+                5000,
+                10000,
+                15000
+              ],
+              "description": "ai-we-build-and-run only: monthly tier in USD (Entry, Growth, or Continuous)"
+            },
+            "lines": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "katana-full-setup only: estimated data lines to import, $0.10 each, $4,000 minimum"
+            }
+          }
+        }
+      }
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false,
+      "title": "Get a quote"
+    }
+  },
+  {
+    "name": "create_order",
+    "title": "Order a service",
+    "description": "Order a service for your user. If your user authorized you to accept for them, pass accept {authorized: true, accepted_by: \"<their full name>\"}: the order is accepted immediately and the response includes a Stripe payment_url. The user gets a confirmation email and can cancel within 48 hours. Without accept, DataAutomation emails the user an order form and the order is binding only after they accept it.",
+    "inputSchema": {
+      "type": "object",
+      "required": [
+        "service",
+        "customer"
+      ],
+      "properties": {
+        "service": {
+          "type": "string",
+          "enum": [
+            "integration",
+            "katana-implementation",
+            "katana-full-setup",
+            "shipstation-implementation",
+            "sutton-implementation",
+            "repzio-implementation",
+            "qbd-to-qbo-migration",
+            "training",
+            "ai-we-build-you-decide",
+            "ai-you-build-we-teach",
+            "ai-we-build-and-run",
+            "custom-software-scope",
+            "fractional-caio-cto"
+          ],
+          "description": "Service id from list_services (apps and the free call are not ordered here)"
+        },
+        "options": {
+          "type": "object",
+          "description": "Service-specific options. Leave empty for fixed-price services.",
+          "properties": {
+            "flows": {
+              "type": "array",
+              "description": "integration only: one entry per flow, $100 per flow per month.",
+              "items": {
+                "type": "object",
+                "required": [
+                  "source",
+                  "destination"
+                ],
+                "properties": {
+                  "source": {
+                    "type": "string",
+                    "description": "System the data comes from, for example Shopify"
+                  },
+                  "destination": {
+                    "type": "string",
+                    "description": "System the data goes to, for example Katana"
+                  },
+                  "data": {
+                    "type": "string",
+                    "description": "What moves, for example orders, inventory, tracking, or invoices"
+                  }
+                }
+              }
+            },
+            "hours": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 80,
+              "description": "training only: number of training hours at $250 per hour"
+            },
+            "hours_per_month": {
+              "type": "integer",
+              "minimum": 2,
+              "maximum": 160,
+              "description": "fractional-caio-cto only: retainer hours per month at $250 per hour"
+            },
+            "tier": {
+              "type": "integer",
+              "enum": [
+                5000,
+                10000,
+                15000
+              ],
+              "description": "ai-we-build-and-run only: monthly tier in USD (Entry, Growth, or Continuous)"
+            },
+            "lines": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "katana-full-setup only: estimated data lines to import, $0.10 each, $4,000 minimum"
+            }
+          }
+        },
+        "customer": {
+          "type": "object",
+          "required": [
+            "name",
+            "email",
+            "phone"
+          ],
+          "description": "The person the order is for",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Full name"
+            },
+            "email": {
+              "type": "string",
+              "description": "Work email; the order form or confirmation goes here"
+            },
+            "phone": {
+              "type": "string",
+              "description": "Phone number, with country code outside the US"
+            },
+            "company": {
+              "type": "string",
+              "description": "Company name"
+            },
+            "website": {
+              "type": "string",
+              "description": "Company website"
+            }
+          }
+        },
+        "details": {
+          "type": "string",
+          "description": "What the user needs: systems, volumes, goals, and deadlines"
+        },
+        "agent": {
+          "type": "object",
+          "description": "Who is placing the order",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Your name, for example Claude or ChatGPT"
+            },
+            "operator": {
+              "type": "string",
+              "description": "Company that operates you"
+            },
+            "contact": {
+              "type": "string",
+              "description": "Contact for questions about this order"
+            }
+          }
+        },
+        "accept": {
+          "type": "object",
+          "description": "Accept now on the user's behalf. Only when the user authorized you to place this order.",
+          "required": [
+            "authorized",
+            "accepted_by"
+          ],
+          "properties": {
+            "authorized": {
+              "type": "boolean",
+              "const": true,
+              "description": "Must be true: the user authorized this order"
+            },
+            "accepted_by": {
+              "type": "string",
+              "description": "Full name of the person who authorized the order"
+            },
+            "title": {
+              "type": "string",
+              "description": "That person's job title"
+            }
+          }
+        }
+      }
+    },
+    "annotations": {
+      "title": "Create an order",
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "get_order_status",
+    "title": "Check an order",
+    "description": "Check an order: whether it is accepted, paid, or cancelled, the cancel deadline, and a Stripe payment_url while it is unpaid.",
+    "inputSchema": {
+      "type": "object",
+      "required": [
+        "order_id",
+        "status_key"
+      ],
+      "properties": {
+        "order_id": {
+          "type": "string",
+          "description": "order_id returned by create_order, for example DA-261118-ABC123"
+        },
+        "status_key": {
+          "type": "string",
+          "description": "status_key returned by create_order"
+        }
+      }
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false,
+      "title": "Get order status"
+    }
+  }
+]
