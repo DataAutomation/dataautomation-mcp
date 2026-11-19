@@ -88,6 +88,10 @@ The same functions are available without MCP at `https://agent.dataautomation.co
 
 Current prices always come from `list_services`. At the time of writing: custom integrations are $100 per flow per month with no setup fee; Katana implementation starts at $2,300, and Katana full setup is $0.10 per imported data line with a $4,000 minimum; QuickBooks Desktop to Online migration is $2,500; training and fractional CAIO or CTO time are $250 per hour. See <https://dataautomation.com/pricing/>.
 
+## Free skills
+
+The [`skills/`](skills) folder has free Claude skills with the rules DataAutomation uses when it sets up [Katana MRP](skills/katana-mrp), [QuickBooks](skills/quickbooks), [Shopify](skills/shopify), and [ShipStation](skills/shipstation). Download them as .zip files at <https://dataautomation.com/skills/>, then upload in Claude under Customize > Skills, or copy a folder into `~/.claude/skills/` for Claude Code.
+
 ## Policies
 
 [Store policy](https://agent.dataautomation.com/policy) · [Terms](https://dataautomation.com/terms-and-conditions/) · [Privacy](https://dataautomation.com/privacy-policy/) · [Data handling](https://dataautomation.com/data-handling-policy/) · [Security](SECURITY.md)
