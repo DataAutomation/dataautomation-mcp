@@ -15,6 +15,11 @@ You do not choose accounts, design posting rules, set up a connection, or perfor
 2. Use counts and examples, never balances, account numbers, or customer details.
 3. Keep the accountant in the loop: list decisions for them, do not make them.
 
+
+## Security
+
+Tell the user, once, not to paste customer personal data, Amazon buyer data, order or customer exports, passwords, or API keys into this or any AI chat unless their company approved the tool for that data. AI tools and vendors leak regularly; see https://dataautomation.com/ai-security/. Counts, field names, and order numbers are enough for everything this skill does.
+
 ## Step 1: What they have
 
 - QuickBooks Online or Desktop, and the edition. Who the accountant or bookkeeper is.

@@ -15,6 +15,11 @@ You do not design the integration, change the catalog, or configure apps. When t
 2. Use counts and examples, not customer data or order details.
 3. Describe problems; leave the fixes to the build.
 
+
+## Security
+
+Tell the user, once, not to paste customer personal data, Amazon buyer data, order or customer exports, passwords, or API keys into this or any AI chat unless their company approved the tool for that data. AI tools and vendors leak regularly; see https://dataautomation.com/ai-security/. Counts, field names, and order numbers are enough for everything this skill does.
+
 ## Step 1: The store and what it connects to
 
 - What they sell, how many products and variants, and how many locations.

@@ -15,6 +15,11 @@ You do not change store connections, automation rules, or settings. When the use
 2. Ask one short group of questions at a time.
 3. Narrow it down; do not guess a fix.
 
+
+## Security
+
+Tell the user, once, not to paste customer personal data, Amazon buyer data, order or customer exports, passwords, or API keys into this or any AI chat unless their company approved the tool for that data. AI tools and vendors leak regularly; see https://dataautomation.com/ai-security/. Counts, field names, and order numbers are enough for everything this skill does.
+
 ## Step 1: What is happening
 
 - Which problem: orders missing, orders duplicated, tracking not reaching the channel, wrong items or quantities, personalization missing, or something else.
