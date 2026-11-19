@@ -1,5 +1,7 @@
 # DataAutomation MCP server
 
+[![mcptry](https://mcptry.com/badge/com.dataautomation/agent)](https://mcptry.com/servers/com.dataautomation/agent)
+
 A remote [Model Context Protocol](https://modelcontextprotocol.io) server that lets AI agents find, price, order, and pay for DataAutomation services on behalf of their user.
 
 DataAutomation has built integrations and implemented business software since 2016: custom integrations between systems like Shopify, Katana MRP, QuickBooks, ShipStation, BigCommerce, Amazon, and EDI; Katana, ShipStation, Sutton, and RepZio implementations; QuickBooks Desktop to Online migrations; AI implementation; custom software; and fractional CAIO or CTO leadership.
