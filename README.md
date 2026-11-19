@@ -1,6 +1,6 @@
 # DataAutomation MCP server
 
-[![mcptry](https://mcptry.com/badge/com.dataautomation/agent)](https://mcptry.com/servers/com.dataautomation/agent)
+[![DataAutomation MCP connector: tool definition quality and endpoint health on Glama](https://glama.ai/mcp/connectors/com.dataautomation/agent/badges/score.svg)](https://glama.ai/mcp/connectors/com.dataautomation/agent) [![mcptry](https://mcptry.com/badge/com.dataautomation/agent)](https://mcptry.com/servers/com.dataautomation/agent)
 
 A remote [Model Context Protocol](https://modelcontextprotocol.io) server that lets AI agents find, price, order, and pay for DataAutomation services on behalf of their user.
 
