@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19",
+ "updated": "2026-11-20",
  "stats": {
   "source": "IBM Cost of a Data Breach Report 2026 (Ponemon Institute, 602 breached organizations)",
   "url": "https://www.ibm.com/reports/data-breach",
@@ -10,6 +10,15 @@
   "no_access_controls": "92%"
  },
  "incidents": [
+  {"date": "2026-11-20", "title": "European Commission hit by an attack run with a public AI hacking tool",
+   "summary": "Attackers used a publicly available AI tool to break into European Commission systems, forcing HR, medical reimbursement, and translation apps offline for more than 10 days. It shows that off-the-shelf AI now lets attackers move fast against any organization with weak spots.",
+   "source": "SecurityWeek", "url": "https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/"},
+  {"date": "2026-11-18", "title": "Microsoft's AI agent toolkit was poisoned to steal passwords and keys",
+   "summary": "Two tampered versions of Microsoft's Agent Framework package for building AI agents stole cloud, GitHub, and OpenAI credentials from any machine that installed them. Teams building AI agents should check versions and change any keys those machines could reach.",
+   "source": "BleepingComputer", "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/"},
+  {"date": "2026-11-16", "title": "A forgotten key given to an AI vendor let attackers into Barracuda's cloud",
+   "summary": "An old cloud access key that Barracuda had shared with an AI vendor, and never revoked, let attackers using an AI hacking tool roam about 10 of its cloud accounts in 44 hours. Some customers had to reset their integration credentials, a reminder to retire keys you hand to AI tools.",
+   "source": "BleepingComputer", "url": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/"},
   {"date": "2026-11-11", "title": "AI vendor breach exposes Notion AI chat transcripts",
    "summary": "A breach at Fireworks AI, a vendor that processed Notion AI requests, exposed chat transcripts for under 1% of Notion workspaces. Companies that typed customer details into those chats are now notifying people.",
    "source": "SecurityWeek", "url": "https://www.securityweek.com/notion-customer-data-compromised-in-fireworks-ai-hack/"},
@@ -36,9 +45,6 @@
    "source": "PointGuard AI", "url": "https://www.pointguardai.com/ai-security-incidents/northflank-breach-caps-black-october-run-on-ai-developer-keys"},
   {"date": "2026-10-30", "title": "Tampered AI extension tried to install a backdoor",
    "summary": "A fake AI coding extension in a public marketplace tried to open remote access on developers' machines, reaching up to 5,000 users in 11 hours.",
-   "source": "PointGuard AI", "url": "https://www.pointguardai.com/ai-security-incidents/tampered-claude-code-extension-slips-ssh-backdoor-into-cursor-marketplace"},
-  {"date": "2026-10-27", "title": "Vendor breach exposes AI agent activity logs",
-   "summary": "A breach at a Warp vendor exposed AI agent traces and telemetry for up to about 1% of users.",
-   "source": "PointGuard AI", "url": "https://www.pointguardai.com/ai-security-incidents/warp-vendor-breach-exposes-ai-agent-traces-and-telemetry"}
+   "source": "PointGuard AI", "url": "https://www.pointguardai.com/ai-security-incidents/tampered-claude-code-extension-slips-ssh-backdoor-into-cursor-marketplace"}
  ]
 }
