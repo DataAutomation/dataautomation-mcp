@@ -54,16 +54,19 @@ claude mcp add --transport http dataautomation https://agent.dataautomation.com/
 
 ## WebMCP
 
-Every page on dataautomation.com registers `list_services`, `get_quote`, `open_order_form`, `create_order`, and `book_a_call` through `navigator.modelContext` when the browser supports WebMCP. Setup steps for every app: https://dataautomation.com/connect-your-ai/
+Every page on dataautomation.com registers `list_services`, `get_quote`, `open_order_form`, `create_order`, `start_app_signup`, and `book_a_call` through `navigator.modelContext` when the browser supports WebMCP. Setup steps for every app: https://dataautomation.com/connect-your-ai/
 
 ## Tools
 
 | Tool | What it does | Side effects |
 | --- | --- | --- |
-| `list_services` | Every service with prices, delivery times, required inputs, and how it is ordered. Optional filters: `category`, `platform` (e.g. Katana), `query`. Call this first. | None (read only) |
-| `get_quote` | Exact price for one service with its options. | None (read only) |
-| `create_order` | Orders a service for the user. Optionally accepts for them and returns a Stripe payment link. | Creates an order and emails the user |
-| `get_order_status` | Whether an order is accepted, paid, or cancelled, the cancel deadline, and a payment link while unpaid. | None (read only) |
+| `list_services` | List every DataAutomation service with its id, name, category, price and price unit, delivery time, required inputs, and how it is ordered. | None (read only) |
+| `get_quote` | Get an exact price for one service and its options before ordering, so you can confirm the cost with your user. | None (read only) |
+| `map_workflow` | Map a described workflow to the systems, steps, and DataAutomation services it needs, before buying. | Starts a mapping job; emails the result only with consent |
+| `get_map_result` | Get the result of map_workflow when it answered with status "working" and a job_id. | None (read only) |
+| `create_order` | Order a service for your user. | Creates an order and emails the user |
+| `get_order_status` | Check an order you created with create_order. | None (read only) |
+| `start_app_signup` | Start a self-serve signup for SyncPersonalized (Amazon Custom and Handmade personalization into ShipStation or Veeqo) or TokSync (TikTok Shop orders into Amazon MCF or ShipStation), when your person asked you to sign them up. | Emails the person a setup link; creates an unconfirmed login until they click it |
 
 Full input schemas, with every argument described, are in [`tools.json`](tools.json).
 

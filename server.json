@@ -2,9 +2,9 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.dataautomation/agent",
   "title": "DataAutomation",
-  "description": "Quote, order, and pay for integrations, Katana implementations, AI, and custom software.",
+  "description": "Quote and order DataAutomation services, or start a SyncPersonalized or TokSync signup for a user.",
   "websiteUrl": "https://dataautomation.com/agents/",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "remotes": [
     {
       "type": "streamable-http",
