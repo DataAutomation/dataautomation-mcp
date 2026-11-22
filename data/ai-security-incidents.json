@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21",
+ "updated": "2026-11-22",
  "stats": {
   "source": "IBM Cost of a Data Breach Report 2026 (Ponemon Institute, 602 breached organizations)",
   "url": "https://www.ibm.com/reports/data-breach",
@@ -10,6 +10,12 @@
   "no_access_controls": "92%"
  },
  "incidents": [
+  {"date": "2026-11-21", "title": "Attackers' AI agents found a new flaw and took over university servers in minutes", "category": "Attacks run with AI",
+   "summary": "Amazon says a China-linked group pointed a free AI hacking tool called Cairn at university servers running MONAI Label, a medical imaging AI tool, and its agents found an unknown flaw and gained full control in about 11 minutes. Any AI tool you run on an internet-facing server can now be probed and broken into by automated attackers far faster than a person could patch it.",
+   "source": "SecurityWeek", "url": "https://www.securityweek.com/amazon-china-linked-hackers-ai-agents-exploited-medical-software-zero-day/"},
+  {"date": "2026-11-20", "title": "Bell Canada says an AI-driven hacker stole business customer data", "category": "Attacks run with AI",
+   "summary": "Bell Canada confirmed that an attacker using AI agents got into a test copy of its system for ordering business phone and internet circuits and took enterprise customer names, job titles, work emails, phone numbers, addresses and some IP addresses. Test and staging systems often hold real customer data with weaker protection, and AI-driven attackers are finding them.",
+   "source": "BleepingComputer", "url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/"},
   {"date": "2026-11-20", "title": "European Commission hit by an attack run with a public AI hacking tool", "category": "Attacks run with AI",
    "summary": "Attackers used a publicly available AI tool to break into European Commission systems, forcing HR, medical reimbursement, and translation apps offline for more than 10 days. It shows that off-the-shelf AI now lets attackers move fast against any organization with weak spots.",
    "source": "SecurityWeek", "url": "https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/"},
