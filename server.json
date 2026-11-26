@@ -2,9 +2,9 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.dataautomation/agent",
   "title": "DataAutomation",
-  "description": "Quote and order DataAutomation services, or start a SyncPersonalized or TokSync signup for a user.",
+  "description": "Operational transformation: order DataAutomation software setup, integrations, AI, or app signups.",
   "websiteUrl": "https://dataautomation.com/agents/",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "remotes": [
     {
       "type": "streamable-http",
