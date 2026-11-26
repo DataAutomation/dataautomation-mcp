@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-26",
  "stats": {
   "source": "IBM Cost of a Data Breach Report 2026 (Ponemon Institute, 602 breached organizations)",
   "url": "https://www.ibm.com/reports/data-breach",
@@ -10,6 +10,15 @@
   "no_access_controls": "92%"
  },
  "incidents": [
+  {"date": "2026-11-24", "title": "An attacker's AI agent posted fake AI models built to steal passwords and keys", "category": "Poisoned AI tools and plugins",
+   "summary": "An autonomous AI agent published models on Hugging Face that looked like a popular open model but were built to quietly collect passwords, keys, and other secrets from anyone who ran them and send them to the attacker. Hugging Face removed all 13 repositories before any victim data came back, a reminder that a free AI model downloaded from a public site can be malware, so only use models from publishers you trust.",
+   "source": "JFrog Security Research", "url": "https://research.jfrog.com/post/the-agent-that-robbed-itself-an-ai-driven-hugging-face-malware-campaign-leaks-its-own-operator/"},
+  {"date": "2026-11-24", "title": "An attacker's AI coding agent found a financial firm's access key in under six minutes", "category": "Attacks run with AI",
+   "summary": "A hacker pointed a free AI coding agent at a US financial services company, and it read the company's public developer documents and found and tested an access key in less than six minutes. The key was a planted decoy so nothing was taken, but it shows how fast AI tools can turn a key left in docs or code into a break-in.",
+   "source": "The Register", "url": "https://www.theregister.com/security/2026/11/24/an-ai-coding-agent-a-browser-and-a-mac-tool-found-a-financial-firms-access-key-in-under-6-minutes/5311922"},
+  {"date": "2026-11-23", "title": "European Commission confirms AI-assisted hackers stole EU Academy users' names and emails", "category": "Attacks run with AI",
+   "summary": "The European Commission said the attackers who used AI tools against its systems also took names and email addresses of people registered on its EU Academy learning site, which it has taken offline. Stolen contact lists like this are often used for convincing phishing emails, so anyone with an account should be wary of messages that appear to come from it.",
+   "source": "ABC News", "url": "https://abcnews.com/International/wireStory/european-commission-warns-eu-academy-users-data-leak-138374368"},
   {"date": "2026-11-23", "title": "Attackers used AI hacking tools to trigger unauthorized payments at Indian banks and fintechs", "category": "Attacks run with AI",
    "summary": "India's cyber agency CERT-In says a group it calls Crafty Falcon used AI attack frameworks to break into banks, lenders, and fintech firms, quietly change business records and approval steps, and then push out payments through normal channels. If attackers can edit who approves payments and where money goes, your own payment process becomes the theft tool, so lock down who can change payee details and approval rules.",
    "source": "The Hacker News", "url": "https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html"},
