@@ -4,7 +4,7 @@
 
 A remote [Model Context Protocol](https://modelcontextprotocol.io) server that lets AI agents find, price, order, and pay for DataAutomation services on behalf of their user.
 
-DataAutomation has built integrations and implemented business software since 2016: custom integrations between systems like Shopify, Katana MRP, QuickBooks, ShipStation, BigCommerce, Amazon, and EDI; Katana, ShipStation, Sutton, and RepZio implementations; QuickBooks Desktop to Online migrations; AI implementation; custom software; and fractional CAIO or CTO leadership.
+DataAutomation does operational transformation: it redesigns how a business runs, implements the business software, ties every system together with managed integrations, and puts AI at the core. It has done this since 2016: custom integrations between systems like Shopify, Katana MRP, QuickBooks, ShipStation, BigCommerce, Amazon, and EDI; Katana, ShipStation, Sutton, and RepZio implementations; QuickBooks Desktop to Online migrations; AI implementation; custom software; and fractional CAIO or CTO leadership.
 
 - **Endpoint:** `https://agent.dataautomation.com/mcp` (Streamable HTTP, JSON responses)
 - **Authentication:** none

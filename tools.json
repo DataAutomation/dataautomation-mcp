@@ -64,6 +64,7 @@
             "syncpersonalized",
             "syncpersonalized-veeqo",
             "toksync",
+            "operational-transformation",
             "finish",
             "discovery-call"
           ],
