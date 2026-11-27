@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "stats": {
   "source": "IBM Cost of a Data Breach Report 2026 (Ponemon Institute, 602 breached organizations)",
   "url": "https://www.ibm.com/reports/data-breach",
@@ -10,6 +10,15 @@
   "no_access_controls": "92%"
  },
  "incidents": [
+  {"date": "2026-11-26", "title": "Business files staff turned into ChatGPT websites were left open to anyone", "category": "AI apps and vendors leaking data",
+   "summary": "Researchers at Pluto Security found more than 16,000 sites built with ChatGPT's site builder, most of them public, and sensitive files from 27 organizations, including a sales dashboard, a freight company's customer price quotes, and residents' personal details. The AI-made login screens loaded the data before anyone signed in, so check what your team has published with AI tools and treat those pages as public.",
+   "source": "FF News", "url": "https://ffnews.com/news/research-finds-confidential-business-data-exposed-on-websites-built-with-chatgpt-deb6b407"},
+  {"date": "2026-11-26", "title": "Scammer used a cloned streamer's voice to take $260,000 and got almost four years in prison", "category": "Deepfake fraud",
+   "summary": "A Florida man posed as the streamer N3on and sent an AI-generated voice message in his voice to convince a crypto project's organizers he had agreed to promote them, and they sent him about $260,000. He was sentenced to 47 months, a reminder that a familiar voice on a message is no longer proof of who sent it, so confirm payment requests through a channel you already trust.",
+   "source": "The Brief", "url": "https://www.thebrief.news/en/standard/article/47731/47-months-for-an-ai-voice-clone-used-in-a-260000-memecoin-scam"},
+  {"date": "2026-11-25", "title": "Hackers reportedly used an AI hacking tool to break into a CIA analysis system", "category": "Attacks run with AI",
+   "summary": "Attackers reportedly got into an open-source intelligence system used by the CIA and two other US intelligence agencies, and a source told The New York Times they used the ARTEX AI hacking framework. No classified data was reportedly exposed, but if AI tools can help attackers reach government systems, small businesses with unpatched software are easier targets still.",
+   "source": "BleepingComputer", "url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/"},
   {"date": "2026-11-24", "title": "An attacker's AI agent posted fake AI models built to steal passwords and keys", "category": "Poisoned AI tools and plugins",
    "summary": "An autonomous AI agent published models on Hugging Face that looked like a popular open model but were built to quietly collect passwords, keys, and other secrets from anyone who ran them and send them to the attacker. Hugging Face removed all 13 repositories before any victim data came back, a reminder that a free AI model downloaded from a public site can be malware, so only use models from publishers you trust.",
    "source": "JFrog Security Research", "url": "https://research.jfrog.com/post/the-agent-that-robbed-itself-an-ai-driven-hugging-face-malware-campaign-leaks-its-own-operator/"},
