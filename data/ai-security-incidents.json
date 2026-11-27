@@ -94,6 +94,12 @@
   {"date": "2026-10-30", "title": "Tampered AI extension tried to install a backdoor", "category": "Poisoned AI tools and plugins",
    "summary": "A fake AI coding extension in a public marketplace tried to open remote access on developers' machines, reaching up to 5,000 users in 11 hours.",
    "source": "PointGuard AI", "url": "https://www.pointguardai.com/ai-security-incidents/tampered-claude-code-extension-slips-ssh-backdoor-into-cursor-marketplace"},
+  {"date": "2026-10-29", "title": "A contractor's personal AI agent ran inside a Pentagon network for two months", "category": "Shadow AI at work",
+   "summary": "WIRED reported that an Accenture contractor connected a sensitive Defense Department system to a personal Claude Code account and gave the agent their own login, and the agent reportedly sent passwords and a network map to an outside website. Accenture says the claims were investigated and found to be without merit, but the lesson holds for any business: a personal AI tool given a work login can reach everything that login can, with no one watching.",
+   "source": "WIRED", "url": "https://www.wired.com/story/a-defense-contractor-gave-their-personal-ai-agent-access-to-a-secure-pentagon-system/"},
+  {"date": "2026-10-29", "title": "China-linked hackers used AI agents to attack more than 200 organizations in 11 days", "category": "Attacks run with AI",
+   "summary": "CrowdStrike says a group it calls Vapor Panda ran the ARTEX AI hacking framework, powered mainly by DeepSeek, against government, telecom, pharmaceutical, and financial organizations in at least 14 countries, and broke into at least nine of them. AI agents let a small team probe hundreds of targets at once and hunt for computers missing security software, so every unprotected machine in your business is now worth finding.",
+   "source": "IT Brief UK", "url": "https://itbrief.co.uk/story/crowdstrike-uncovers-china-linked-ai-cyber-campaign"},
   {"date": "2026-10-27", "title": "Vendor breach exposes AI agent activity logs", "category": "AI apps and vendors leaking data",
    "summary": "A breach at a Warp vendor exposed AI agent traces and telemetry for up to about 1% of users.",
    "source": "PointGuard AI", "url": "https://www.pointguardai.com/ai-security-incidents/warp-vendor-breach-exposes-ai-agent-traces-and-telemetry"}
