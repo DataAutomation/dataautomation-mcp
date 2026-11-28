@@ -4,7 +4,7 @@
 
 A remote [Model Context Protocol](https://modelcontextprotocol.io) server that lets AI agents find, price, order, and pay for DataAutomation services on behalf of their user.
 
-DataAutomation does operational transformation: it redesigns how a business runs, implements the business software, ties every system together with managed integrations, and puts AI at the core. It has done this since 2016: custom integrations between systems like Shopify, Katana MRP, QuickBooks, ShipStation, BigCommerce, Amazon, and EDI; Katana, ShipStation, Sutton, and RepZio implementations; QuickBooks Desktop to Online migrations; AI implementation; custom software; and fractional CAIO or CTO leadership.
+DataAutomation designs, builds, and runs AI agents and agentic automation with rules, safeguards, and human approval, as part of operational transformation: it redesigns how a business runs, implements the business software, ties every system together with managed integrations, and puts AI agents at the core. It has done this since 2016: custom integrations between systems like Shopify, Katana MRP, QuickBooks, ShipStation, BigCommerce, Amazon, and EDI; Katana, ShipStation, Sutton, and RepZio implementations; QuickBooks Desktop to Online migrations; AI implementation; custom software; and fractional CAIO or CTO leadership.
 
 - **Endpoint:** `https://agent.dataautomation.com/mcp` (Streamable HTTP, JSON responses)
 - **Authentication:** none
@@ -67,6 +67,7 @@ Every page on dataautomation.com registers `list_services`, `get_quote`, `open_o
 | `create_order` | Order a service for your user. | Creates an order and emails the user |
 | `get_order_status` | Check an order you created with create_order. | None (read only) |
 | `start_app_signup` | Start a self-serve signup for SyncPersonalized (Amazon Custom and Handmade personalization into ShipStation or Veeqo) or TokSync (TikTok Shop orders into Amazon MCF or ShipStation), when your person asked you to sign them up. | Emails the person a setup link; creates an unconfirmed login until they click it |
+| `request_agent_scan` | Request a free agent-readiness scan of your user's website, when your user asked for it. | Writes data |
 
 Full input schemas, with every argument described, are in [`tools.json`](tools.json).
 

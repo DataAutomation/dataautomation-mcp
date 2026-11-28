@@ -2,9 +2,9 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.dataautomation/agent",
   "title": "DataAutomation",
-  "description": "Operational transformation: order DataAutomation software setup, integrations, AI, or app signups.",
+  "description": "AI agents and automation: order DataAutomation AI agents, integrations, setup, scans, or signups.",
   "websiteUrl": "https://dataautomation.com/agents/",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "remotes": [
     {
       "type": "streamable-http",

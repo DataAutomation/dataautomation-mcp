@@ -65,6 +65,10 @@
             "syncpersonalized-veeqo",
             "toksync",
             "operational-transformation",
+            "agent-ready",
+            "agentic-ordering",
+            "agentic-checkout",
+            "agentic-upkeep",
             "finish",
             "discovery-call"
           ],
@@ -146,7 +150,11 @@
                   "ai-you-build-we-teach",
                   "ai-we-build-and-run",
                   "custom-software-scope",
-                  "fractional-caio-cto"
+                  "fractional-caio-cto",
+                  "agent-ready",
+                  "agentic-ordering",
+                  "agentic-checkout",
+                  "agentic-upkeep"
                 ]
               },
               "options": {
@@ -317,7 +325,11 @@
             "ai-you-build-we-teach",
             "ai-we-build-and-run",
             "custom-software-scope",
-            "fractional-caio-cto"
+            "fractional-caio-cto",
+            "agent-ready",
+            "agentic-ordering",
+            "agentic-checkout",
+            "agentic-upkeep"
           ],
           "description": "Service id from list_services (apps and the free call are not ordered here). For several services in one order, use items instead."
         },
@@ -397,7 +409,11 @@
                   "ai-you-build-we-teach",
                   "ai-we-build-and-run",
                   "custom-software-scope",
-                  "fractional-caio-cto"
+                  "fractional-caio-cto",
+                  "agent-ready",
+                  "agentic-ordering",
+                  "agentic-checkout",
+                  "agentic-upkeep"
                 ]
               },
               "options": {
@@ -648,6 +664,57 @@
     },
     "annotations": {
       "title": "Start an app signup",
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "request_agent_scan",
+    "title": "Request a free agent-readiness scan",
+    "description": "Request a free agent-readiness scan of your user's website, when your user asked for it. DataAutomation scans the site against the AI agent standards (discovery files, MCP and A2A, agent ordering, and agent payments) and emails your user a report with their score and what is missing. Free, no obligation. Returns ok, status requested, and next_step.",
+    "inputSchema": {
+      "type": "object",
+      "required": [
+        "website",
+        "email",
+        "person_consented"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "website": {
+          "type": "string",
+          "description": "The site to scan, for example yourstore.com"
+        },
+        "email": {
+          "type": "string",
+          "description": "Your user's work email. The report goes here"
+        },
+        "name": {
+          "type": "string",
+          "description": "Optional. Your user's name"
+        },
+        "person_consented": {
+          "type": "boolean",
+          "description": "True only if your user asked for the scan and agreed to get the report by email"
+        },
+        "agent": {
+          "type": "object",
+          "description": "Who is asking",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "operator": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "annotations": {
+      "title": "Request an agent scan",
       "readOnlyHint": false,
       "destructiveHint": false,
       "idempotentHint": false,
